@@ -424,9 +424,10 @@ img, picture {
 
   }
   .wrapper {
-      margin: 0 auto;
-      left: 50%;
-       top: -50%;
+    left: 525px;
+     top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
     -ms-grid-rows: 3fr 1fr;
         grid-template-rows: 3fr 1fr;
     -ms-grid-columns: auto;
