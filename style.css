@@ -423,10 +423,6 @@ img, picture {
     transform: scale(0.5);
   }
   body {
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-attachment: fixed;
-    overflow-x: hidden;
   }
   .wrapper {
     left: 10vw;
