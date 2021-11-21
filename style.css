@@ -421,12 +421,12 @@ img, picture {
     bottom: -200px;
   }
   body {
-    overflow: visible;
+
   }
   .wrapper {
       margin: 0 auto;
       left: 50%;
-       top: 50%;
+       top: -50%;
     -ms-grid-rows: 3fr 1fr;
         grid-template-rows: 3fr 1fr;
     -ms-grid-columns: auto;
