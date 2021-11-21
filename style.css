@@ -2,14 +2,14 @@
 body {
   margin: 0 auto;
   min-height: 100vh;
+  min-width: 100vw;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   display: -ms-grid;
   display: grid;
   place-items: center;
   font-family: 'Rubik', sans-serif;
-  position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 img, picture {
