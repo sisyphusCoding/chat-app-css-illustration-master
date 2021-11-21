@@ -411,7 +411,7 @@ img, picture {
   margin-left: 2px;
 }
 
-@media only screen and (max-width: 375px)  {
+@media only screen and (max-width: 475px)  {
   .curve-l {
     left: -400px;
     top: -200px;
@@ -425,7 +425,7 @@ img, picture {
     height:100vh;
     width:100vw;
     background-attachment: scroll;
-    overflow:visible;
+    overflow-x: hidden;
   }
   .wrapper {
     left: 10vw;
