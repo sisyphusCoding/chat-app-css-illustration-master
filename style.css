@@ -424,10 +424,9 @@ img, picture {
     overflow: visible;
   }
   .wrapper {
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+      clear:both;
+      min-width: 220px;
+      margin: auto;
     -ms-grid-rows: 3fr 1fr;
         grid-template-rows: 3fr 1fr;
     -ms-grid-columns: auto;
