@@ -415,10 +415,12 @@ img, picture {
   .curve-l {
     left: -400px;
     top: -200px;
+    transform: scale(0.5);
   }
   .curve-r {
     right: -400px;
-    bottom: -200px;
+    bottom: -400px;
+    transform: scale(0.5);
   }
   body {
     background-repeat: no-repeat;
