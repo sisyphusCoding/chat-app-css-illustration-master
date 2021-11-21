@@ -411,7 +411,7 @@ img, picture {
   margin-left: 2px;
 }
 
-@media only screen and (max-width: 475px)  {
+@@media screen and (max-width: 600px) and (min-width: 375px) {
   .curve-l {
     left: -400px;
     top: -200px;
@@ -419,9 +419,10 @@ img, picture {
   }
   .curve-r {
     right: -200px;
-    bottom: 0px;
+    bottom: -800px;
   }
   body {
+    min-height: 50vh;
   }
   .wrapper {
     left: 10vw;
