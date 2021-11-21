@@ -435,8 +435,8 @@ img, picture {
   .wrapper {
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -20%);
+            transform: translate(-50%, -20%);
     -ms-grid-rows: 3fr 1fr;
         grid-template-rows: 3fr 1fr;
     -ms-grid-columns: auto;
