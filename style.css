@@ -2,7 +2,6 @@
 body {
   margin: 0 auto;
   min-height: 100vh;
-  min-width: 100vw;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   display: -ms-grid;
@@ -419,10 +418,10 @@ img, picture {
   }
   .curve-r {
     right: -200px;
-    bottom: -800px;
+    top: 800px;
   }
   body {
-    min-height: 50vh;
+    
   }
   .wrapper {
     left: 10vw;
