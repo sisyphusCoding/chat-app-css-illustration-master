@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap')
+$mag:    hsl(293, 100%, 63%)
+$violet: hsl(264, 100%, 61%)
+$white:  hsl(270, 20%, 96%)
+$radio:  hsl(271, 36%, 24%)
+$sub-heading:  hsl(276, 100%, 81%)
+$chat-left:  hsl(276, 55%, 52%)
+$chat-right: hsl(271, 15%, 53%)
+$place-text: hsl(206, 6%, 79%)
+$main-heading: hsl(271, 36%, 24%)
+$paragraph:  hsl(270, 7%, 94%)    
+
+body
+    margin: 0
+    min-height: 100vh
+    text-rendering: optimizeSpeed
+    line-height: 1.5
+    display: grid
+    place-items: center
+    font-family: 'Rubik', sans-serif
+    position: relative
+    overflow: hidden
+
+img,picture 
+    max-width: 100%
+    display: block
+
+@media (prefers-reduced-motion: reduce) 
+  html:focus-within 
+   scroll-behavior: auto
+
+  
+
+
+
+  
+*,
+*::before,
+*::after 
+    box-sizing: border-box
+
+@mixin debug
+   border: 0px solid black
+
+@mixin shadow
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px
+
+@mixin shadow-1 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px
+
+
+@mixin text-style
+    background: #ffffff
+    height: fit-content
+    width: fit-content
+    margin: 0px 0px 10px 0px
+    border-radius: 15px
+    font-size: 60%    
+    text-align: left
+    color: $chat-left
+    line-height: normal
+    padding: 1.2em
+    @include shadow-1
+
+
+ 
+ 
+    
+.curve-l
+    height: 90vh
+    width: 700px
+    background: $violet
+    position: absolute
+    border-bottom-left-radius: 48%
+    border-bottom-right-radius: 48%
+    left: -100px
+    top: -10px
+
+.curve-r
+    height: 90vh
+    width: 700px
+    background: $place-text
+    position: absolute
+    border-top-left-radius: 48%
+    border-top-right-radius: 48%
+    right: -250px
+    bottom: -100px
+    opacity: 0.1
+
+.sub-wrap
+    position: relative
+    @include debug
+    
+.wrapper
+    height: 680px
+    width: 1000px
+    left: 525px
+    top: 50%
+    transform: translate(0%,-50%)
+    @include debug
+    position: absolute
+    display: grid
+    align-items: center
+    grid-template-columns: 3fr 1fr
+    grid-template-rows: auto
+
+    .text
+        height: fit-content
+        width: 500px
+        font-size: 120%
+        @include debug
+        text-align: justify
+        font-weight: lighter
+        p[id]
+            font-size: 180%
+            color: $main-heading
+            font-weight: 500
+        p
+            color: $chat-right
+            
+
+
+    .mobile
+        height: 600px
+        width: 300px
+        @include debug
+        border-radius: 30px
+        background: $white
+        padding: 0.3em
+        display: grid
+        place-items: center
+        @include shadow
+        > *
+            @include debug
+        .one
+            height: 70px
+            width: 275px
+            border-radius: 20px 20px 5px 5px
+            background: linear-gradient(90deg, $violet 0, $mag 100%);
+
+            margin-top: 8px
+            display: flex
+            align-content: flex-start
+            justify-content: space-between
+            .wrapper-one
+                display: grid
+                height: 70px
+                width: 110px
+                grid-template-columns: 60px 60px
+                grid-template-rows: auto
+                place-items: end
+                row-gap: -10px
+                .text
+                    display: grid
+                    height: 30px
+                    width: 100px
+                    place-items: center
+                    margin: 0px -40px 12.5px 0px
+                    .name
+                        font-size: 65%
+                        color: white
+                    .avail
+                        font-size: 50%
+                        color: $white
+                        opacity: 0.4
+                .profile
+                    height: 35px
+                    width: 35px
+                    margin: 0px 0px 10px 0px
+                    border-radius: 50%
+                    background-image: url('images/avatar.jpg')
+                    background-repeat: no-repeat
+                    background-size: cover
+                    border: 2px solid white
+
+            &:before
+                content: " "
+                position: absolute
+                height: 25px
+                width: 160px
+                background: $white
+                top: 08px
+                left: 75px
+                border-radius: 0px 0px 17px 17px
+
+
+        .two
+            height: 505px
+            width: 275px
+            background: $place-text
+            border-radius: 5px 5px 20px 20px 
+            margin-bottom: 40px
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            flex-grow: 1
+            > *
+                height: 40%
+                width: 97%
+                border-radius: 15px
+                @include debug
+                margin: 10px
+            .wrap-one
+                height: 20%
+                width: fit-content
+                .box-1
+                    .text
+                        @include text-style
+                        margin: 5px 0px 10px -50px
+                        width: 200px
+                        background: $paragraph
+                         
+            .box-2
+                display: grid
+                place-items: end
+                margin: 10px
+                margin-top: 0px
+                .pic
+                    display: flex
+                    width: 160px
+                    margin-bottom: 10px
+                    flex-grow: 1
+                    column-gap: 10px
+                    @include shadow-1
+                    > *
+                        height: 50px
+                        width: 50px
+                        border-radius: 10px
+                        background-repeat: no-repeat
+                        background-size: cover
+                    .pic_1
+                        background-image: url('images/dog-image-1.jpg')
+                    .pic_2
+                        background-image: url('images/dog-image-2.jpg')
+                    .pic_3
+                        background-image: url('images/dog-image-3.jpg')
+                .text
+                    @include text-style
+                    color: $chat-right
+                .text-1
+                .text-2
+            .box-3
+                margin-top: -42px
+                width: fit-content
+                height: fit-content
+                > * 
+                    font-size: 70%
+                    @include text-style
+                    line-height: 15px
+                    width: 170px
+                .f
+                    display: flex
+                    justify-content: space-evenly
+                    align-content: space-around
+                    width: 200px
+                    background: linear-gradient(270deg, $violet 0, $mag 100%);
+                    color: $white
+                    span[id]
+                        font-weight: bold
+                        font-size: 80%    
+                    #two
+                        margin-left: 20px
+                   
+
+        .three
+            height: 45px
+            width: 230px
+            background: $white
+            position: absolute
+            bottom: 20px
+            left: 35px
+            border-radius: 50px
+            display: flex
+            align-items:  center
+            justify-content: space-evenly
+           
+            .type
+                font-size: 70%
+                opacity: 0.4
+                height: 15px
+                width: 180px
+            .icon
+                height: 35px
+                width: 35px
+                border-radius: 50%
+                background: $radio
+                color: $white
+                display: grid
+                font-size: 110%
+                place-items: center
+                .ic
+                    margin-left: 2px
+    
+        
+@media only screen and (max-width: 575px) 
+    .curve-l
+        left: -400px
+        top: -200px
+    .curve-r
+        right: -400px
+        bottom: -200px
+        
+    body
+        overflow: visible
+    .wrapper 
+        
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        grid-template-rows: 3fr 1fr
+        grid-template-columns: auto
+        width: fit-content
+        place-items: center
+        align-items: center
+        .text
+            text-align: center
+            width: 60vw
+            p[id]
+                font-size: 170%
+            p
+                font-size: 90%
+                
+
+        
+  
