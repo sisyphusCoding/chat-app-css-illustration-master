@@ -418,8 +418,8 @@ img, picture {
     transform: scale(0.5);
   }
   .curve-r {
-    right: -400px;
-    bottom: -400px;
+    right: -200px;
+    bottom: 10px;
     transform: scale(0.5);
   }
   body {
